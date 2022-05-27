@@ -62,3 +62,56 @@ wrapper {
   border-radius: 15px;
   /* background-color: tomato; */
 }
+
+/* 게시글 작성 페이지  */
+.board__register {
+  padding: 25px;
+  border-bottom: 1px solid rgba(99, 99, 99, 0.2);
+}
+
+.board__register h2 {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#board__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.board__form__input {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.board__form__input textarea,
+.board__form__input input {
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.board__form__submit {
+  position: relative;
+  margin-top: 50px;
+  bottom: 0px;
+}
+
+.board__form__submit input {
+  border: none;
+  cursor: pointer;
+  padding: 10px 50px;
+  border-radius: 15px;
+  background-color: #ff006e;
+  color: white;
+  font-size: 18px;
+}
+
+.board__form__submit input:hover {
+  opacity: 0.5;
+}
