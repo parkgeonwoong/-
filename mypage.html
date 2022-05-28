@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>마이 페이지</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"
+              ><img src="./assets/icons.png" class="header__logo"
+            /></a>
+          </li>
+          <li class="header__title">
+            <a href="index.html">정보처리기사 CBT</a>
+          </li>
+        </ul>
+        <ul class="header__nav">
+          <li><a href="./list.html">게시판</a></li>
+          <!-- <li id="header_mypage"><a href="#">마이페이지</a></li> -->
+          <li>
+            <a href="./login.html"><span class="header__login">로그인</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <wrapper>
+      <div class="wrapper">
+        <div class="wrapper__container">
+          <div class="wrapper__container__Main">
+            <div class="board__register">
+              <h2>정보 수정</h2>
+            </div>
+            <!-- input 태그  -->
+            <form action="./index.html" id="board__form">
+              <div class="board__form__input">
+                <input
+                  type="email"
+                  placeholder="id"
+                  name="member_id"
+                  value=""
+                  readonly="readonly"
+                />
+                <input placeholder="password" name="member_password" value="" />
+                <input placeholder="name" name="member_name" />
+
+                <input placeholder="email" name="member_email" value="" />
+              </div>
+              <div class="board__form__submit">
+                <div class="">
+                  <input type="submit" value="작성" id="boardRegister" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </wrapper>
+  </body>
+</html>
