@@ -38,23 +38,32 @@
               <h2>정보 수정</h2>
             </div>
             <!-- input 태그  -->
-            <form action="./index.html" id="board__form">
+            <form action="#" id="board__form">
               <div class="board__form__input">
+                <input placeholder="id" name="member_id" readonly="readonly" />
+                <input
+                  type="password"
+                  id="registerPassword"
+                  placeholder="password"
+                  name="member_password"
+                />
+                <input
+                  type="text"
+                  id="registerName"
+                  placeholder="name"
+                  name="member_name"
+                />
+
                 <input
                   type="email"
-                  placeholder="id"
-                  name="member_id"
-                  value=""
-                  readonly="readonly"
+                  id="registerEmail"
+                  placeholder="email"
+                  name="member_email"
                 />
-                <input placeholder="password" name="member_password" value="" />
-                <input placeholder="name" name="member_name" />
-
-                <input placeholder="email" name="member_email" value="" />
               </div>
               <div class="board__form__submit">
                 <div class="">
-                  <input type="submit" value="작성" id="boardRegister" />
+                  <input type="submit" value="수정" id="boardRegister" />
                 </div>
               </div>
             </form>
@@ -62,5 +71,6 @@
         </div>
       </div>
     </wrapper>
+    <script src="./js/mypage.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-const registerSubmit = document.querySelector("#registerSubmit");
+const boardRegister = document.querySelector("#boardRegister");
 const registerName = document.querySelector("#registerName");
 const registerId = document.querySelector("#registerId");
 const registerPassword = document.querySelector("#registerPassword");
@@ -26,4 +26,4 @@ const handleSubmit = () => {
   validate();
 };
 
-registerSubmit.addEventListener("click", handleSubmit);
+boardRegister.addEventListener("click", handleSubmit);
