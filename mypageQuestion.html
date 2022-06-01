@@ -30,5 +30,43 @@
         </ul>
       </nav>
     </header>
+
+    <wrapper>
+      <div class="wrapper">
+        <div class="wrapper__container">
+          <table class="table">
+            <thead class="table__header">
+              <tr class="table__header__row">
+                <th>번호.</th>
+                <th>제목.</th>
+                <th>성공률.</th>
+              </tr>
+            </thead>
+
+            <c:forEach items="${Question}" var="Q">
+              <tbody class="table__body">
+                <tr class="table__body__row">
+                  <td><c:out value="${Q.qno}" />1</td>
+                  <td>
+                    <c:out value="${Q.title}" />검토회의 전에 요구사항 명세서를
+                    미리 배포하여 사전 검토한 후 짧은 검토 회의를 통해 오류를
+                    조기에 검출하는데 목적을 두는 요구 사항 검토 방법은?
+                  </td>
+                  <td><c:out value="${Q.success}" />0</td>
+                </tr>
+                <tr class="table__body__row">
+                  <td><c:out value="${Q.qno}" />1</td>
+                  <td>
+                    <c:out value="${Q.title}" />검토회의 전에 요구사항 명세서를
+                    미리 배포하여 사전 검토한 후 짧은
+                  </td>
+                  <td><c:out value="${Q.success}" />0</td>
+                </tr>
+              </tbody>
+            </c:forEach>
+          </table>
+        </div>
+      </div>
+    </wrapper>
   </body>
 </html>
