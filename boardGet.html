@@ -65,5 +65,41 @@
         </div>
       </div>
     </wrapper>
+
+    <!-- 댓글 작성 -->
+    <div class="comment">
+      <form role="form" action="/reply/new" method="post" id="comment__in_form">
+        <input type="hidden" name="bno" value= <c:out value="${board.bno}"/>>
+        <input type="text" name="replyer" placeholder="작성자" id="comment_plyer">
+        <input type="text" name="reply" placeholder="댓글 내용" id="comment_ply">
+        <input type="hidden" name="pageNum" value= <c:out value="${pageMaker.cri.pageNum}"/>>
+        <input type="submit" value="댓글작성" id="comment_sub">
+      </form>
+      
+      <!-- 댓글 출력 -->
+      <div class="comment__out">
+        <c:forEach items="${lists}" var="reply">
+          <thead>
+            <td>작성자: 123<c:out value="${reply.replyer}" /> / </td> 
+            <td>내용: 123<c:out value="${reply.reply}" /></td>
+          </thead>
+          <!-- 댓글 수정 -->
+          <form role="form" action="/reply/modify" method="post">
+            <input type="hidden" name="bno" value= <c:out value="${reply.bno}"/>>
+            <input type="hidden" name="rno" value= <c:out value="${reply.rno}"/>>
+            <input type="hidden" name="pageNum" value= <c:out value="${pageMaker.cri.pageNum}"/>>
+            <input type="text" name="reply" placeholder="수정할내용"> 
+            <input type="submit" value="수정">
+          </form>
+          <!-- 댓글 삭제 -->
+          <form role="form" action="/reply/remove" method="post">
+            <input type="hidden" name="bno" value= <c:out value="${reply.bno}"/>>
+            <input type="hidden" name="rno" value= <c:out value="${reply.rno}"/> readonly="readonly">
+            <input type="hidden" name="pageNum" value= <c:out value="${pageMaker.cri.pageNum}"/>>
+            <input type="submit" value="삭제">
+          </form>
+      </c:forEach>
+      </div>
+    </div>
   </body>
 </html>

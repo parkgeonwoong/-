@@ -185,6 +185,7 @@ tbody {
   font-size: 18px;
 }
 
+#comment_sub:hover,
 .wrapper__container__btn div:hover,
 .board__form__submit input:hover {
   opacity: 0.5;
@@ -226,4 +227,43 @@ tbody {
   background-color: #ff006e;
   color: white;
   font-size: 18px;
+}
+
+/* 댓글 */
+.comment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: tomato; */
+}
+
+#comment__in_form {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  /* background-color: tomato; */
+}
+
+#comment__in_form > input {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+}
+
+#comment_plyer {
+  width: 100px;
+}
+
+#comment_ply {
+  width: 500px;
+}
+
+.comment__out {
+  background-color: tomato;
+  display: flex;
+  padding: 20px;
 }
